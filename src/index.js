@@ -10,6 +10,12 @@ app.get("/",(req,res)=>{
     return res.status(200).send({message:"welcome to ecommerce api - node"})
 })
 
+
+//Report routes now they are not authenticated
+const reportRouter=require("./routes/reportRoutes.js")
+console.log("Index.js")
+app.use("/api/reports",reportRouter)
+
 const authRouter=require("./routes/auth.routes.js")
 app.use("/auth",authRouter)
 
@@ -43,5 +49,7 @@ app.use("/api/ratings",ratingRouter);
 // admin routes handler
 const adminOrderRoutes=require("./routes/adminOrder.routes.js");
 app.use("/api/admin/orders",adminOrderRoutes);
+
+
 
 module.exports={app};

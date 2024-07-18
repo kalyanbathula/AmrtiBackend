@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 const mongoDbUrl =
-  "mongodb+srv://kalyanbathula7893:rLNlqurDcF0q5zPh@cluster0.cyxpjje.mongodb.net/";
+"mongodb+srv://harshpahwa74:jyFBADBhVAYXhCaZ@cluster0.06c31bq.mongodb.net/?retryWrites=true&w=majority";
 const connectDb=()=>{
     console.log("connected")
     return mongoose.connect(mongoDbUrl)
