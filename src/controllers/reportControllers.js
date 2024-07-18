@@ -6,7 +6,6 @@ const fixedurl = "https://amrti.com/reports";
 async function findlength(category) {
     
     const reports = await Report.find({ category: category });
-    console.log(reports);
     const length = reports.length;
     console.log('Length:', length);
     return length;
